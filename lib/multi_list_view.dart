@@ -15,7 +15,7 @@ class _MultipleSelectionDemoState extends State<MultipleSelectionDemo> {
     return Scaffold(
       appBar: AppBar(title: Text("List View Demo")),
       body: ListView.builder(
-        itemCount: ,
+        itemCount:5 ,
         itemBuilder: (context, i) {
           return Card(
             color: selectedIndex.contains(i) ? Colors.blue : Colors.white,

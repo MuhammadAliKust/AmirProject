@@ -36,6 +36,7 @@ dependencies:
   cupertino_icons: ^1.0.8
   image_picker: ^1.1.2
   string_validator: ^1.1.0
+  smooth_page_indicator: ^1.2.1
 
 dev_dependencies:
   flutter_test:

@@ -6,6 +6,8 @@ import 'package:ibad_project/networ_image.dart';
 import 'file_image.dart';
 import 'list_view.dart';
 import 'login.dart';
+import 'notifications_view.dart';
+import 'onboarding.dart';
 
 void main() {
   runApp(MyApp());
@@ -17,7 +19,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: MultipleSelectionDemo(),
+      home: OnboardingView(),
     );
   }
 }
