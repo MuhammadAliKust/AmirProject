@@ -3,7 +3,12 @@ import 'package:ibad_project/asset_image.dart';
 import 'package:ibad_project/grid_view.dart';
 import 'package:ibad_project/multi_list_view.dart';
 import 'package:ibad_project/networ_image.dart';
+import 'package:ibad_project/provider/user.dart';
+import 'package:ibad_project/screen_a.dart';
+import 'package:ibad_project/tabbar.dart';
+import 'package:provider/provider.dart';
 
+import 'bottom_bar.dart';
 import 'file_image.dart';
 import 'list_view.dart';
 import 'login.dart';
@@ -11,7 +16,12 @@ import 'notifications_view.dart';
 import 'onboarding.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(
+    MultiProvider(
+      providers: [ChangeNotifierProvider(create: (context) => UserProvider())],
+      child: MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -19,8 +29,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: GridViewDemo(),
-    );
+    return MaterialApp(home: ScreenAView());
   }
 }

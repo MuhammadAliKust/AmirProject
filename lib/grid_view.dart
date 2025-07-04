@@ -7,7 +7,6 @@ class GridViewDemo extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text("Grid View Demo")),
-
       body: Padding(
         padding: const EdgeInsets.all(8.0),
         child: GridView.builder(
@@ -18,7 +17,7 @@ class GridViewDemo extends StatelessWidget {
             childAspectRatio: 5,
           ),
           itemBuilder: (context, i) {
-            return Container(height: 100, width: 100, color: Colors.blue);
+            return Container(height: 100, width: 100, color: Color(0xffbababa));
           },
         ),
       ),
