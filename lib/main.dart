@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:ibad_project/asset_image.dart';
+import 'package:ibad_project/dashboard.dart';
+import 'package:ibad_project/first_screen.dart';
 import 'package:ibad_project/grid_view.dart';
 import 'package:ibad_project/multi_list_view.dart';
 import 'package:ibad_project/networ_image.dart';
+import 'package:ibad_project/provider/balance.dart';
 import 'package:ibad_project/provider/sum.dart';
 import 'package:ibad_project/provider/user.dart';
 import 'package:ibad_project/screen_a.dart';
@@ -20,12 +23,10 @@ import 'onboarding.dart';
 void main() {
   runApp(
     MultiProvider(
-      providers: [
-        ChangeNotifierProvider(create: (context) => UserProvider()),
-        ChangeNotifierProvider(create: (context) => SumProvider()),
-      ],
-      child: MyApp(),
-    ),
+        providers: [
+          ChangeNotifierProvider(create: (context)=>BalanceProvider())
+        ],
+        child: MyApp()),
   );
 }
 
@@ -34,6 +35,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: CalculatorView());
+    return MaterialApp(home: DashboardView());
   }
 }
